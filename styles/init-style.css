@@ -52,6 +52,12 @@ body{
   border: 1px solid red;
 } 
 
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+}
 .btn{
   margin-top: 10px;
   outline: none;
@@ -62,7 +68,6 @@ body{
   color: white;
   border: 0;
   border-radius: 5px;
-  position: absolute;
 }
 
 .btn:active{
@@ -78,26 +83,12 @@ body{
   right: 6vw;
 }
 
-#create{
-  right: 20vw;
-}
-
-#join{
-  right: 6vw;
-}
 
 .buffering-create, .buffering-join{
-  position: absolute;
+  margin-top: 15px;
   bottom: 30px;
   display: none;
-}
 
-.buffering-create{
-  right: 23vw;
-}
-
-.buffering-join{
-  right: 9vw;
 }
 
 footer{
@@ -125,8 +116,10 @@ footer a{
     width: 60vw;
   }
   .btn{
-    width: auto;
-    margin: 5px;
+    width: 25vw;
+  }
+  .btn-container{
+    flex-direction: column;
   }
 }
 
