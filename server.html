@@ -1,0 +1,33 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/init-style.css">
+    <title>Tic-Tac-Toe | - Pratik Pakhale</title>
+</head>
+<body>
+  <div class="container">
+    <div class="input-container">
+      <input type="text" placeholder=" Server ID" id="serverID" autocomplete="off">
+    </div>
+    <div class="btn-container">
+      <button class="btn" id="create">Create</button>
+      <img src="./images/loading-buffering.gif" alt="Loading" height="30px" width="30px" class="buffering-create">
+    </div>
+    <div class="btn-container">
+      <button class="btn" id="join">Join</button>
+      <img src="./images/loading-buffering.gif" alt="Loading" height="30px" width="30px" class="buffering-join">
+    </div>
+  </div>
+  <footer>
+    <div>
+      <a href="#">Instructions</a>
+    </div>
+  </footer>
+</body>
+<script src="./libraries/fetchAPI.js"></script>
+<script src="./scripts/server-script.js"></script>
+</html>

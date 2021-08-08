@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+}
+
+.scorecard{
+    margin: 5px;
+    padding: 5px;
+    top: 2;
+    left: 2;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: center;
+}
+.scores{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 150px;
+}
+.name{
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.round{
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(223, 65, 65);
+    background-color: pink;
+    margin: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-bar{
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+}
+.result-buttons{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.result-buttons button{
+    margin-top: 10px;
+    outline: none;
+    height: 40px;
+    background: #5678cf;
+    color: white;
+    border: 0;
+    width: 100px;
+    border-radius: 5px;
+}
+.result-buttons button:active{
+    box-shadow: 2px 2px 2px gray;
+}
+
+.game-container{
+    padding: 15px;
+    margin: 15px;
+    top:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 50vw;
+}
+.name-panel-container{
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+}
+.name-panel{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 40vw;
+    margin-bottom: 15px;
+}
+
+.name-panel input[type="text"]{
+    height: 30px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+.name-panel input[type="text"]:focus{
+    outline: none;
+}
+#turn{
+    margin-top: 10px;
+}
+.game-buttons{
+    margin-top: 15px;
+    padding: 5px;
+}
+.game-buttons button{
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    margin: 2px;
+    font-size: xx-large;
+    border: 1px solid black;
+    color: gray;
+    box-shadow: 2px 2px 3px gray;
+    font-weight: 100;
+}
+.game-buttons button:disabled{
+    color: gray;
+    opacity: 1;
+}
+.game-buttons button:active{
+    box-shadow: 0px 0px 0px gray;
+}
+
+
+/* media queries below */
+@media (max-width: 750px){
+    body{
+        align-items: center;
+        flex-direction: column;
+    }
+    .game-container{
+        width: 100vw;
+        align-items: center;
+    }
+    .name-panel{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0vw 10vw 0vw 10vw;
+        width: 100%;
+    }
+    .name-panel input[type="text"]{
+        height: 30px;
+        width:150px;
+        border-radius: 8px;
+        border: 1px solid gray;
+    }
+    .game-buttons button{
+        width: 25vw;
+        height: 25vw;
+        margin-bottom: 2px;
+    }
+}

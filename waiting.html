@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe | - Pratik Pakhale</title>
+</head>
+<body>
+Please wait until someone joins.
+</body>
+<script src="./libraries/fetchAPI.js"></script>
+<script>
+
+if(sessionStorage.getItem('username') === null){
+  window.location.href = "./index.html"
+}else if(sessionStorage.getItem('player') !== 'creator' || sessionStorage.getItem('gameURL') === null){
+  window.location.href = "./server.html"
+}
+
+const http = new fetchAPI
+let fetchedData
+waiting()
+async function waiting(){
+  await http.get(sessionStorage.getItem('gameURL'))
+    .then(data => fetchedData = data)
+    .catch(err => console.error(err))
+  console.log(fetchedData)
+  if(fetchedData.joiner !== null){
+    sessionStorage.setItem('opponentName',fetchedData.joiner)
+    sessionStorage.setItem('turn','Your')
+    window.location.href = "./game.html"
+  }else{
+    setTimeout(waiting, 1000)
+  }
+}
+</script>
+</html>

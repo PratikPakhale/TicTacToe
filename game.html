@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/app.css">
+  <title>Tic-Tac-Toe | - Pratik Pakhale</title>
+</head>
+<body>
+  <div class="scorecard">
+    <div class="round">
+      Round&nbsp;&nbsp;<span id="round">1</span>
+    </div>
+    <div class="scores">
+      <div class="vertical-bar">
+        <div class="name">You</div>
+        <div class="your-score">0</div>
+      </div>
+      <div class="vertical-bar">
+        <div class="name">Opp.</div>
+        <div class="opp-score">0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <div class="name-panel-container">
+    <div class="name-panel">
+      <div class="name">You</div>
+      <div><input type="text" id="yourName" readonly></div>
+    </div>
+    <div class="name-panel">
+      <div class="name">Opp.</div>
+      <div><input type="text" id="opponentName" readonly></div>
+    </div>
+    <div class="name-panel">
+      <div class="name">Turn</div>
+      <div ><input type="text" id="turn" readonly></div>
+    </div>
+    </div>
+    <div class="game-buttons">
+      <table>
+        <tr>
+          <td><button id="1" onclick="btnClick('1')"></button></td>
+          <td><button id="2" onclick="btnClick('2')"></button></td>
+          <td><button id="3" onclick="btnClick('3')"></button></td>
+        </tr>
+        <tr>
+          <td><button id="4" onclick="btnClick('4')"></button></td>
+          <td><button id="5" onclick="btnClick('5')"></button></td>
+          <td><button id="6" onclick="btnClick('6')"></button></td>
+        </tr>
+        <tr>
+          <td><button id="7" onclick="btnClick('7')"></button></td>
+          <td><button id="8" onclick="btnClick('8')"></button></td>
+          <td><button id="9" onclick="btnClick('9')"></button></td>
+        </tr>
+      </table>
+    
+    </div>
+    <div class="result-buttons">
+      <div><button class="end-game">END</button></div>
+    </div>
+  </div>
+  
+</body>
+<script src="./libraries/fetchAPI.js"></script>
+<script src="./scripts/app.js"></script>
+</html>
