@@ -18,7 +18,14 @@ let fetchedData, generatedURL
 
 if(sessionStorage.getItem('username') === null){
   window.location.href = "./index.html"
+}else{
+  if(sessionStorage.getItem('turn') !== null){
+    let username = sessionStorage.getItem('username')
+    sessionStorage.clear()
+    sessionStorage.setItem('username',username)
+  }
 }
+
 
 serverID.focus()
 

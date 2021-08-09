@@ -59,6 +59,9 @@ async function btnClick(id){
   if(turn.value === "Your" && document.getElementById(id).value !== "X" && document.getElementById(id).value !== "O"){
     sessionStorage.setItem('updateX',sessionStorage.getItem('updateX')+id)
     sessionStorage.setItem('turn','Opponent')
+    
+    loadOngoingGame()
+
     await http.get(sessionStorage.getItem('gameURL'))
       .then(data => fetchedData=data)
       .catch(err => console.error(err))
@@ -72,7 +75,6 @@ async function btnClick(id){
     await http.put(sessionStorage.getItem('gameURL'),fetchedData)
       .catch(err => console.log(err))
     
-    loadOngoingGame()
     checkGameOver()
     waitingForResponse()
   }
