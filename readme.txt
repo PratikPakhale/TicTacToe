@@ -11,3 +11,6 @@ STEP 2:
   > The UI is easy to understand. By exploring 1-2 times you'll get to know about it easily.
   > Happy Playing ;)
 
+NOTE : 
+  > If you feel like server isn't responding, just refresh the page and everything will be alright. 
+  > If you open game page, and the previous match wasn't ended then it will continue from there, just go to homepage for new match. 
