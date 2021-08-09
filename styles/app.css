@@ -112,6 +112,7 @@ body{
 #turn{
     margin-top: 10px;
     color: white;
+    border-color: white;
 }
 .game-buttons{
     margin-top: 15px;
