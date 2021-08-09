@@ -34,7 +34,7 @@ function loadOngoingGame(){
   opponent.textContent = sessionStorage.getItem('opponent')
   yourName.value = sessionStorage.getItem('username')
   opponentName.value = sessionStorage.getItem('opponentName')
-  turn.value = sessionStorage.getItem('turn')
+  setTurn(sessionStorage.getItem('turn'))
   for(let i = 0; i < sessionStorage.getItem('updateX').length ; i++){
     if(document.getElementById(sessionStorage.getItem('updateX')[i]) !== null){
       document.getElementById(sessionStorage.getItem('updateX')[i]).value = "X"
@@ -170,6 +170,16 @@ function winner(ox){
 		return;
 	}
 	
+}
+
+function setTurn(player){
+  if(player === 'Opponent'){
+    turn.value = 'Opponent';
+    turn.style.backgroundColor = '#ff6666';
+  }else{
+    turn.value = 'Your';
+    turn.style.backgroundColor = '#54f752';
+  }
 }
 
 document.querySelector('.end-game').addEventListener('click',end)
